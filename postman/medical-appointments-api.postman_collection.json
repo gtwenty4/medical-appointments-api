@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "19be3f82-76cb-43ee-b68f-083cce849a96",
+		"name": "medical-appointments-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "patients",
+			"item": [
+				{
+					"name": "POST-patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Gabriel\",\n    \"lastName\": \"Teran\",\n    \"gender\": \"M\",\n    \"email\": \"gabo15@gmail.com\",\n    \"phone\": \"+58 4245878985\",\n    \"address\": \"El Junquito\",\n    \"birthDate\": \"1999-07-03\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medical-appointments-api/v1/patients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medical-appointments-api",
+								"v1",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-patient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/medical-appointments-api/v1/patients/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medical-appointments-api",
+								"v1",
+								"patients",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH-patient",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Gabriel\",\n    \"lastName\": \"Teran\",\n    \"gender\": \"M\",\n    \"email\": \"gabo.t12@gmail.com\",\n    \"phone\": \"+58 4245878985\",\n    \"address\": \"El Junquito\",\n    \"birthDate\": \"1999-05-12\",\n    \"active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medical-appointments-api/v1/patients/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medical-appointments-api",
+								"v1",
+								"patients",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE-patient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/medical-appointments-api/v1/patients/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medical-appointments-api",
+								"v1",
+								"patients",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-patient-appointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Brain tomography and Magnetic resonance\",\n    \"date\": \"2022-12-15\",\n    \"appointmentServices\": [\n        {\n            \"service\": {\n                \"id\": 1\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medical-appointments-api/v1/patients/5/appointments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medical-appointments-api",
+								"v1",
+								"patients",
+								"5",
+								"appointments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH-patient-appointment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Brain tomography and Magnetic resonance\",\n    \"date\": \"2022-12-08\",\n    \"appointmentServices\": [\n        {\n            \"service\": {\n                \"id\": 1\n            }\n        },\n        {\n            \"service\": {\n                \"id\": 9\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medical-appointments-api/v1/patients/5/appointments/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medical-appointments-api",
+								"v1",
+								"patients",
+								"5",
+								"appointments",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE-patient-appoitment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/medical-appointments-api/v1/patients/3/appointments/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medical-appointments-api",
+								"v1",
+								"patients",
+								"3",
+								"appointments",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-patient-appointments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/medical-appointments-api/v1/patients/1/appointments?startDate=1999-02-02&endDate=2023-02-05",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medical-appointments-api",
+								"v1",
+								"patients",
+								"1",
+								"appointments"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "1999-02-02"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-02-05"
+								},
+								{
+									"key": "limit",
+									"value": "20",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "medical-areas",
+			"item": [
+				{
+					"name": "GET-medical-area",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/medical-appointments-api/v1/medical-areas/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medical-appointments-api",
+								"v1",
+								"medical-areas",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-medical-area-service",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"X-Ray\",\n    \"description\": \"Practice of producing two-dimensional images using X-ray radiation\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medical-appointments-api/v1/medical-areas/1/services",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medical-appointments-api",
+								"v1",
+								"medical-areas",
+								"1",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH-medical-area-service",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Y-Ray\",\n    \"description\": \"Practice of producing two-dimensional images using Y-ray radiation\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medical-appointments-api/v1/medical-areas/1/services/32",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medical-appointments-api",
+								"v1",
+								"medical-areas",
+								"1",
+								"services",
+								"32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE-medical-area-service",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/medical-appointments-api/v1/medical-areas/1/services/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medical-appointments-api",
+								"v1",
+								"medical-areas",
+								"1",
+								"services",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
